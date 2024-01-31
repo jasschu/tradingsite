@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+<section>
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Buy/Sell</th>
+            </tr>
+        </thead>
+        <tbody>
+             {% for transaction in history %}
+            <tr>
+                <td>{{ transaction.ticker }}</td>
+                <td>{{ transaction.shares }}</td>
+                <td>{{ transaction.transaction_type }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}

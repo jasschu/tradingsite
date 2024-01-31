@@ -1,0 +1,5 @@
+Flask
+Flask-Session
+Flask-SQLALchemy
+Flask-Migrate
+yfinance
